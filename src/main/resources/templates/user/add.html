@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增</title>
+</head>
+<body>
+<h3>新增页面</h3>
+<p th:text="${msg}"></p>
+<form th:action="@{/register}">
+    <p>用户名：<label>
+        <input type="text" name="username">
+    </label></p>
+    <p>密码：<label>
+        <input type="text" name="password">
+    </label></p>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

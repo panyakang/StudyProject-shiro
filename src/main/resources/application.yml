@@ -1,0 +1,28 @@
+mybatis:
+  type-aliases-package: com.example.springbootshiro
+  mapper-locations: classpath:mapper/*.xml
+spring:
+  datasource:
+    username: study
+    password: Study1456445263
+    url: jdbc:mysql://rm-bp1f582701d459h31lo.mysql.rds.aliyuncs.com:3306/db_study01?serverTimezone=UTC&useUnicode=true*characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    manWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minWvictableIdleTimeMillis: 300000
+    validationQUery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+
+
+    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
